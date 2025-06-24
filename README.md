@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+# React + Tailwind + React Query User List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Created by Jin Choi, 24th June 2025
 
-Currently, two official plugins are available:
+## 🚀 Objective
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates how to build a simple **React** application that fetches and displays user data from a remote API using:
 
-## Expanding the ESLint configuration
+- **React**
+- **Tailwind CSS** for styling
+- **@tanstack/react-query** for data fetching and caching
+- **Jest** and **React Testing Library** for testing
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The goal is to showcase best practices in:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Component structure
+- Async data handling with error/loading states
+- Unit testing React components with mocked API calls
+
+## 📦 Features
+
+- 📡 Fetches user data from `https://jsonplaceholder.typicode.com/users`
+- 🧾 Displays user name and email in a styled list
+- 💥 Handles loading and error states gracefully
+- ✅ Fully tested with Jest and React Testing Library
+
+## 🛠️ Stack
+
+- React (w/ TypeScript)
+- Tailwind CSS
+- @tanstack/react-query
+- Jest & React Testing Library
+- Vite (or CRA, if applicable)
+
+## ▶️ Getting Started
+
+1. **Install dependencies:**
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
