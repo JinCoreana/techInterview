@@ -13,7 +13,7 @@ const mockData = [
 describe("UserList", () => {
   test("renders loading state initially", () => {});
 
-  test("renders users after successful fetch", async () => {});
+  test("renders users after successful fetch", () => {});
 
-  test("renders error message on fetch failure", async () => {});
+  test("renders error message on fetch failure", () => {});
 });
